@@ -10,8 +10,8 @@ public class ProcentDiscount extends Discount {
     }
 
     @Override
-    public double applyDiscount(double amount) {
-        return amount * procentDiscount / 100;
+    public double applyDiscount(Basket basket) {
+        return basket.getTotal() * procentDiscount / 100;
     }
 
     @Override

@@ -12,8 +12,9 @@ public class FixedDiscount extends Discount {
     }
 
     @Override
-    public double applyDiscount(double amount) {
-        if (amount >= minimumAmount) {
+    public double applyDiscount(Basket basket) {
+
+        if (basket.getTotal() >= minimumAmount) {
             return fixedDiscount;
         } else {
             return 0;
