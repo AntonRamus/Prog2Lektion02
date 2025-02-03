@@ -18,4 +18,8 @@ public class ProcentDiscount extends Discount {
     public String getDescription() {
         return description;
     }
+
+    public int getProcentDiscount() {
+        return procentDiscount;
+    }
 }
