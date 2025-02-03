@@ -13,9 +13,9 @@ public class TwoForOneDiscount extends Discount {
     public double applyDiscount(Basket basket) {
         int numberOfDiscountedBooks = basket.getItems().size() / 2;
         double totalDiscount = 0;
-        ArrayList<Book> sortedItems = selectionSort(basket.getItems());
+        ArrayList<Book> sortedBooks = selectionSort(basket.getItems());
         for (int i = 0; i < numberOfDiscountedBooks; i++) {
-            totalDiscount -= sortedItems.get(i).getPrice();
+            totalDiscount -= sortedBooks.get(i).getPrice();
         }
         return totalDiscount;
     }
